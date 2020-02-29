@@ -89,6 +89,9 @@ button {
 .portfolio__examples-set {
   margin-bottom: 20px;
 }
+.portfolio__examples-set::nth-child(n + 13) {
+  display: none;
+}
 .about-us {
   margin: 0 auto;
   padding-top: 59px;
