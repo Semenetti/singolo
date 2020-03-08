@@ -6,3 +6,6 @@
 
 ### [Link to task "Singolo. Part 3"](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-2/singolo/part-3/singolo-3-ru.md)
 #### [my solution](https://semenetti.github.io/singolo/singolo3.html)
+---
+
+### [my solution hole site](https://semenetti.github.io/singolo/)
