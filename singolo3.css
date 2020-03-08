@@ -1,0 +1,216 @@
+@import "./assets/fonts/fonts.css";
+
+html {
+   font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", Verdana, sans-serif;
+  background-color: #ffffff;
+  font-weight: normal;
+}
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #666d89;
+  font-size: 3rem;
+  font-weight: 900;
+}
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #666d89;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: -0.01em;
+  line-height: 0.8em;
+}
+.wrapper {
+  width: 1020px;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.contacts h2 {
+  letter-spacing: -0.009em;
+  color: #f0d8d9;
+}
+.contacts p {  
+  font: 300 1.8rem/3rem "Lato", Verdana, sans-serif;
+  letter-spacing: -0.012em;
+  text-align: justify;
+  color: #666d89;
+  color: #f0d8d9;
+  
+}
+.social-box {
+  margin-top: 24px;
+  padding-left: 1px;
+}
+.social-box .ico {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #666d89;
+  border-radius: 100%;
+}
+.social-box .ico:not(:first-child) {
+  margin-left: 5px;
+}
+.social-box .ico:hover,
+.contact-form__info .phone:hover,
+.contact-form__info .email:hover {
+  opacity: 0.55;
+}
+.ico.social-box__facebook {
+  background-image: url("./assets/img/facebook_ico.svg");
+}
+.ico.social-box__google {
+  background-image: url("./assets/img/google_ico.svg");
+  background-position-x: 7px;
+}
+.ico.social-box__twitter {
+  background-image: url("./assets/img/twitter_ico.svg");
+  background-position-x: 7px;
+}
+.ico.social-box__linkedin {
+  background-image: url("./assets/img/linkedin_ico.svg");
+  background-position-y: 7px;
+}
+button {
+  margin: 0 auto;
+  cursor: pointer;
+  background-color: transparent;
+}
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.contacts {
+  width: 1020px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 13px;
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+.contacts h3,
+.contacts a {
+  color: #f0d8d9;
+}
+.contact-form {
+  margin-top: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+form > * {
+  display: block;
+}
+
+input,
+textarea,
+form button {
+  padding: 12px 15px;
+  width: 619px;
+  box-sizing: border-box;
+  font: normal 1.2rem/1.4rem "Lato", "Arial", sans-serif;
+  border: none;
+  border-radius: 5px;
+  background-color: #d6564f;
+  color: #f0d8d9;
+}
+::placeholder {
+  color: #f48c8f;
+  opacity: 1;
+}
+input,
+textarea {
+  margin-bottom: 16px;
+}
+
+textarea {
+  padding: 11px 15px 13px 14px;
+  resize: none;
+  max-height: 202px;
+}
+form button {
+  padding: 12px 14px 10px;
+  width: initial;
+  background-color: transparent;
+  color: #f0d8d9;
+  border: 1px solid #f0d8d9;
+}
+form button:hover {
+  padding: 13px 15px 11px;
+  background-color: #f0d8d9;
+  color: #f06c64;
+  border: none;
+}
+.contact-form__info {
+  width: 303px;
+  padding-left: 3px;
+  box-sizing: border-box;
+}
+.contact-form__info h3 {
+  margin-top: 2px;
+  letter-spacing: 0.004em;
+}
+.contact-form__info > p,
+.contact-form__info > a {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 1.2rem;
+  letter-spacing: -0.004em;
+  line-height: 22px;
+  text-align: justify;
+  hyphens: manual;
+}
+.contact-form__info .address,
+.contact-form__info > a {
+  padding-left: 23px;
+}
+.contact-form__info > a {
+  display: block;
+  margin-top: 0;
+  line-height: 22px;
+  text-decoration: none;
+}
+.contact-form__info .address {
+  margin-top: 20px;
+  letter-spacing: -0.013em;
+  background: transparent url("./assets/img/address.svg") no-repeat 3px center;
+}
+.contact-form__info .phone {
+  margin-top: -0.07em;
+  letter-spacing: -0.016em;
+  background: transparent url("./assets/img/phone.svg") no-repeat left center;
+}
+.contact-form__info .email {
+  letter-spacing: -0.002em;
+  background: transparent url("./assets/img/email.svg") no-repeat left 7px;
+}
+footer {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 22px 0 21px;
+  background-color: #2d303a;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .copyright {
+  margin-top: -4px;
+  font-weight: 300;
+  font-size: 1.2rem;
+  letter-spacing: -0.004em;
+  color: #666d89;
+}
+footer .social-box {
+  margin: 0;
+}
