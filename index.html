@@ -28,12 +28,18 @@
       <div class="wrapper__slider">
         <section class="wrapper__slider-box slider">
           <button type="button" class="button-box left arrow"></button>
-          <div class="slider-box iphone">
-            <img class="vertical" src="assets/img/iphone_vertical.png" alt="" />
+          <div class="slider-box iphone" id="slider-box">
+            <img
+              class="vertical"
+              id="vertical"
+              alt="iPhone"
+              onclick="changeIphoneBackground(id)"
+            />
             <img
               class="horizontal"
-              src="assets/img/iphone_horizontal.png"
-              alt=""
+              id="horizontal"
+              alt="iPhone"
+              onclick="changeIphoneBackground(id)"
             />
           </div>
           <button type="button" class="button-box right arrow"></button>
