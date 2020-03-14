@@ -261,27 +261,47 @@
           tortor mauris condimentum nibh.
         </p>
         <div class="contact-form">
-          <form method="POST">
+          <form id="form">
             <input
               type="text"
               name="name"
+              id="name"
               placeholder="Name (Required)"
               required
             />
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="Email (Required)"
               required
             />
-            <input type="text" name="subject" placeholder="Subject" />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Subject"
+            />
             <textarea
               name="message"
               placeholder="Describe your project in detail..."
+              id="describe"
               cols="30"
               rows="13"
             ></textarea>
-            <button type="submit" formmethod="POST">Submit</button>
+            <button id="myBtn">Submit</button>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2>Письмо отправлено</h2>
+                </div>
+                <div class="modal-body">
+                  <p id="subject_popup"></p>
+                  <p id="describe_popup"></p>
+                </div>
+                <span class="close"><button>OK</button></span>
+              </div>
+            </div>
           </form>
           <div class="contact-form__info">
             <h3>Contact Information</h3>
