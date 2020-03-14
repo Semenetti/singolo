@@ -32,3 +32,12 @@ function changeIphoneBackground(iphone) {
       break;
   }
 }
+
+const navigation = document.getElementById("navigation");
+
+navigation.addEventListener("click", event => {
+  navigation
+    .querySelectorAll("a")
+    .forEach(item => item.classList.remove("active_menu"));
+  event.target.classList.add("active_menu");
+});
