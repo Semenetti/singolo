@@ -55,9 +55,13 @@
           </div>
         </header>
       </div>
-      <div class="wrapper__slider">
-        <section class="wrapper__slider-box slider">
-          <button type="button" class="button-box left arrow"></button>
+      <div class="wrapper__slider" id="wrapper__slider">
+        <section class="wrapper__slider-box slider" id="wrapper1">
+          <button
+            type="button"
+            class="button-box left arrow"
+            onclick="slider()"
+          ></button>
           <div class="slider-box iphone" id="slider-box">
             <img
               class="vertical"
@@ -71,8 +75,13 @@
               alt="iPhone"
               onclick="changeIphoneBackground(id)"
             />
+            <img src="./assets/img/Slide2.png" id="slide2" alt="" />
           </div>
-          <button type="button" class="button-box right arrow"></button>
+          <button
+            type="button"
+            class="button-box right arrow"
+            onclick="slider()"
+          ></button>
         </section>
       </div>
       <a class="anchor" id="services"></a>

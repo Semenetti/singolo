@@ -44,16 +44,14 @@ body {
 .wrapper__slider button:focus {
   outline: none;
 }
+.wrapper__slider button:active {
+  outline: none;
+}
 .wrapper__slider button:hover {
   opacity: 0.45;
 }
-/* .wrapper__header {  
-  background-color: #2d303a;
-  border-bottom: 6px solid #373c4d;  
-} */
 .wrapper__slider {
   background-color: #f06c64;
-  border-bottom: 6px solid #ea676b;
   max-width: 1020px;
   margin: 0 auto;
   padding-top: 95px;
@@ -146,11 +144,11 @@ nav a {
   margin-left: 54px;
 }
 #vertical,
-#vertical_black {
+#verticalblack {
   width: 25%;
 }
 #horizontal,
-#horizontal_black {
+#horizontalblack {
   width: 55%;
 }
 .iphone.horizontal {
@@ -809,6 +807,9 @@ a.anchor {
 .selected_image {
   box-sizing: border-box;
   border: 5px solid #f06c64;
+}
+#slide2 {
+  width: 90%;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {

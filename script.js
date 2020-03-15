@@ -4,28 +4,35 @@ verticalIphone.src = "./assets/img/iphone_vertical.png";
 const horizontalIphone = document.getElementById("horizontal");
 horizontalIphone.src = "./assets/img/iphone_horizontal.png";
 
+currentVerticalScreen = 0;
+currentHorizontalScreen = 0;
+
 function changeIphoneBackground(iphone) {
   const currentIphone = document.getElementById(iphone);
 
   switch (iphone) {
     case "vertical":
       currentIphone.src = "./assets/img/iphone_vertical_black.png";
-      currentIphone.id = iphone + "_black";
+      currentIphone.id = iphone + "black";
+      currentVerticalScreen = 1;
       break;
 
     case "horizontal":
       horizontalIphone.src = "./assets/img/iphone_horizontal_black.png";
-      currentIphone.id = iphone + "_black";
+      currentIphone.id = iphone + "black";
+      currentHorizontalScreen = 1;
       break;
 
-    case "vertical_black":
+    case "verticalblack":
       currentIphone.src = "./assets/img/iphone_vertical.png";
       currentIphone.id = "vertical";
+      currentVerticalScreen = 0;
       break;
 
-    case "horizontal_black":
+    case "horizontalblack":
       horizontalIphone.src = "./assets/img/iphone_horizontal.png";
       currentIphone.id = "horizontal";
+      currentHorizontalScreen = 0;
       break;
 
     default:
@@ -161,15 +168,58 @@ tagsBtn.addEventListener("click", event => {
 
 const clickedImage = document.getElementById("portfolio__examples-box");
 
-clickedImage.addEventListener("click", event => {  
+clickedImage.addEventListener("click", event => {
   clickedImage
     .querySelectorAll("img")
-    .forEach(el => el.classList.remove("selected_image")); 
+    .forEach(el => el.classList.remove("selected_image"));
   event.target.classList.add("selected_image");
 });
 
 function clearBorder() {
   clickedImage
     .querySelectorAll("img")
-    .forEach(el => el.classList.remove("selected_image"));  
+    .forEach(el => el.classList.remove("selected_image"));
+}
+
+const slide1 = document.getElementById("wrapper1");
+const slide2 = document.getElementById("slide2");
+const sliderWrapper = document.getElementById("wrapper__slider");
+
+let slidecounter = 0;
+function slider() {
+  if (slidecounter == 0) {
+    if (currentHorizontalScreen == 0) {
+      horizontal.style.display = "none";
+    }
+    if (currentHorizontalScreen == 1) {
+      horizontalblack.style.display = "none";
+    }
+    if (currentVerticalScreen == 1) {
+      verticalblack.style.display = "none";
+    }
+    if (currentVerticalScreen == 0) {
+      vertical.style.display = "none";
+    }
+
+    slide2.style.display = "inline-block";
+    sliderWrapper.style.backgroundColor = "#648BF0";
+    slidecounter = 1;
+  } else {
+    if (currentHorizontalScreen == 0) {
+      horizontal.style.display = "inline-block";
+    }
+    if (currentHorizontalScreen == 1) {
+      horizontalblack.style.display = "inline-block";
+    }
+    if (currentVerticalScreen == 1) {
+      verticalblack.style.display = "inline-block";
+    }
+    if (currentVerticalScreen == 0) {
+      vertical.style.display = "inline-block";
+    }
+
+    slide2.style.display = "none";
+    sliderWrapper.style.backgroundColor = "#f06c64";
+    slidecounter = 0;
+  }
 }
