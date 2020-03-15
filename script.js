@@ -68,7 +68,6 @@ btn.onclick = () => {
   ) {
     modal.style.display = "none";
   } else {
-      
     if (subject !== "") {
       document.getElementById("subject_popup").innerText = "Тема: " + subject;
     } else {
@@ -96,33 +95,17 @@ window.onclick = function(event) {
   }
 };
 
-// const form = document.getElementById("form");
-
-// form.addEventListener("submit", e => {
-//   e.preventDefault();
-//   return false;
-// });
-
-// formBtn = document.getElementById('formBtn')
-
-// BUTTON.addEventListener('click', (e) => {
-
-// if (document.getElementById('name').value !== '' && document.getElementById('email').value !== '') {
-//     e.preventDefault();
-//     const subject = document.getElementById('subject').value.toString();
-//     const project = document.getElementById('project').value.toString();
-//     document.getElementById('result1').innerText = 'Письмо отправлено';
-//     if (subject !== '') {
-//         document.getElementById('result2').innerText = 'Тема: ' + subject;
-//     } else { document.getElementById('result2').innerText = 'Без темы';
-//     }
-
-//     if (project !== '') {
-//         document.getElementById('result3').innerText = 'Описание: ' + project;
-//     } else { document.getElementById('result3').innerText = 'Без описания';
-//     }
-
-//     document.getElementById('body').classList.add('hide');
-//     document.getElementById('message-block').classList.remove('hidden');
-//     document.getElementById('message').classList.remove('hidden');
-// }
+let curretMobIcon = 0;
+function showSideMenu() {
+  if (curretMobIcon == 0) {
+    document.getElementById("side-menu").style.width = "250px";
+    document.getElementById("mobile_menu-btn").style.transform =
+      "rotate(90deg)";
+    curretMobIcon = 1;
+  } else {
+    document.getElementById("side-menu").style.width = "0";
+    document.getElementById("mobile_menu-btn").style.transform =
+      "rotate(180deg)";
+    curretMobIcon = 0;
+  }
+}
