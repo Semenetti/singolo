@@ -109,3 +109,67 @@ function showSideMenu() {
     curretMobIcon = 0;
   }
 }
+
+let imgBase = [
+  "./assets/img/1row_1.jpg",
+  "./assets/img/1row_2.jpg",
+  "./assets/img/1row_3.jpg",
+  "./assets/img/1row_4.jpg",
+  "./assets/img/2row_1.jpg",
+  "./assets/img/2row_2.jpg",
+  "./assets/img/2row_3.jpg",
+  "./assets/img/2row_4.jpg",
+  "./assets/img/3row_1.jpg",
+  "./assets/img/3row_2.jpg",
+  "./assets/img/3row_3.jpg",
+  "./assets/img/3row_4.jpg"
+];
+
+let positionBase = [
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  img9,
+  img10,
+  img11,
+  img12
+];
+
+function changeImg() {
+  let arr = imgBase.slice(1, imgBase.length);
+  arr.push(imgBase[0]);
+  for (let i = 0; i < 12; i += 1) {
+    positionBase[i].src = arr[i];
+  }
+  imgBase = arr;
+}
+
+const tagsBtn = document.getElementById("portfolio__tags");
+
+tagsBtn.addEventListener("click", event => {
+  tagsBtn
+    .querySelectorAll("button")
+    .forEach(el => el.classList.remove("selected"));
+  event.target.classList.add("selected");
+  clearBorder();
+});
+
+const clickedImage = document.getElementById("portfolio__examples-box");
+
+clickedImage.addEventListener("click", event => {  
+  clickedImage
+    .querySelectorAll("img")
+    .forEach(el => el.classList.remove("selected_image")); 
+  event.target.classList.add("selected_image");
+});
+
+function clearBorder() {
+  clickedImage
+    .querySelectorAll("img")
+    .forEach(el => el.classList.remove("selected_image"));  
+}
