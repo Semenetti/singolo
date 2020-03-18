@@ -183,10 +183,10 @@ function clearBorder() {
 
 const slide1 = document.getElementById("wrapper1");
 const slide2 = document.getElementById("slide2");
-const sliderWrapper = document.getElementById("wrapper__slider");
+const sliderWrapper = document.getElementById("wrapper__slider-box");
 
 let slidecounter = 0;
-function slider() {
+function sliderLeft() {
   if (slidecounter == 0) {
     if (currentHorizontalScreen == 0) {
       horizontal.style.display = "none";
@@ -203,6 +203,8 @@ function slider() {
 
     slide2.style.display = "inline-block";
     sliderWrapper.style.backgroundColor = "#648BF0";
+    sliderWrapper.classList.add('slide-left')
+    setTimeout(() => sliderWrapper.classList.remove('slide-left'), 450)
     slidecounter = 1;
   } else {
     if (currentHorizontalScreen == 0) {
@@ -220,6 +222,49 @@ function slider() {
 
     slide2.style.display = "none";
     sliderWrapper.style.backgroundColor = "#f06c64";
+    sliderWrapper.classList.add('slide-left')
+    setTimeout(() => sliderWrapper.classList.remove('slide-left'), 450)
+    slidecounter = 0;
+  }
+}
+function sliderRight() {
+  if (slidecounter == 0) {
+    if (currentHorizontalScreen == 0) {
+      horizontal.style.display = "none";
+    }
+    if (currentHorizontalScreen == 1) {
+      horizontalblack.style.display = "none";
+    }
+    if (currentVerticalScreen == 1) {
+      verticalblack.style.display = "none";
+    }
+    if (currentVerticalScreen == 0) {
+      vertical.style.display = "none";
+    }
+
+    slide2.style.display = "inline-block";
+    sliderWrapper.style.backgroundColor = "#648BF0";
+    sliderWrapper.classList.add('slide-right')
+    setTimeout(() => sliderWrapper.classList.remove('slide-right'), 450)
+    slidecounter = 1;
+  } else {
+    if (currentHorizontalScreen == 0) {
+      horizontal.style.display = "inline-block";
+    }
+    if (currentHorizontalScreen == 1) {
+      horizontalblack.style.display = "inline-block";
+    }
+    if (currentVerticalScreen == 1) {
+      verticalblack.style.display = "inline-block";
+    }
+    if (currentVerticalScreen == 0) {
+      vertical.style.display = "inline-block";
+    }
+
+    slide2.style.display = "none";
+    sliderWrapper.style.backgroundColor = "#f06c64";
+    sliderWrapper.classList.add('slide-right')
+    setTimeout(() => sliderWrapper.classList.remove('slide-right'), 450)
     slidecounter = 0;
   }
 }

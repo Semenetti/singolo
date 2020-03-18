@@ -13,6 +13,7 @@ body {
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .wrapper__header h1 {
   margin: 0;
@@ -51,8 +52,8 @@ body {
   opacity: 0.45;
 }
 .wrapper__slider {
-  background-color: #f06c64;
-  max-width: 1020px;
+  /* background-color: #f06c64; */
+  max-width: 1024px;
   margin: 0 auto;
   padding-top: 95px;
 }
@@ -119,12 +120,13 @@ nav a {
   top: 0;
 }
 .slider {
+  position: relative;   
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1020px;
+  max-width: 1024px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
@@ -721,6 +723,66 @@ a.anchor {
   animation-duration: 0.4s;
 }
 
+.slide-left {
+  position: relative;  
+  background-color: blue;
+  animation-name: animateLeft;
+  animation-duration: 0.4s;
+}
+.slide-right {
+  position: relative;
+  background-color: blue;
+  animation-name: animateRight;
+  animation-duration: 0.4s;
+}
+.wrapper__slider-box {
+  background-color: #f06c64;
+}
+
+
+@-webkit-keyframes animateRight {
+  from {
+    left: -110%;
+    /* opacity: 0; */
+  }
+  to {
+    left: 0;
+    /* opacity: 1; */
+  }
+}
+
+@keyframes animateRight {
+  from {
+    right: -100%;
+    /* opacity: 0; */
+  }
+  to {
+    right: 0;
+    /* opacity: 1; */
+  }
+}
+
+@-webkit-keyframes animateLeft {
+  from {
+    right: -110%;
+    /* opacity: 0; */
+  }
+  to {
+    right: 0;
+    /* opacity: 1; */
+  }
+}
+
+@keyframes animateLeft {
+  from {
+    left: -110%;
+    /* opacity: 0; */
+  }
+  to {
+    left: 0;
+    /* opacity: 1; */
+  }
+}
 @-webkit-keyframes animatetop {
   from {
     top: -300px;
