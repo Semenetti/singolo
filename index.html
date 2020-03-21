@@ -27,30 +27,45 @@
                 <h1 id="mobile_header">Singolo<span>*</span></h1></a
               >
               <li>
-                <a class="selected nav-item active_menu" href="#singolo"
+                <a
+                  class="selected nav-item active_menu"
+                  href="#singolo"
+                  id="home-id"
                   >Home</a
                 >
               </li>
-              <li><a class="nav-item" href="#services">Services</a></li>
-              <li><a class="nav-item" href="#portfolio">Portfolio</a></li>
-              <li><a class="nav-item" href="#about">About</a></li>
-              <li><a class="nav-item" href="#contacts">Contact</a></li>
+              <li>
+                <a class="nav-item" href="#services" id="services-id"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a class="nav-item" href="#portfolio" id="portfolio-id"
+                  >Portfolio</a
+                >
+              </li>
+              <li><a class="nav-item" href="#about" id="about-id">About</a></li>
+              <li>
+                <a class="nav-item" href="#contacts" id="contacts-id"
+                  >Contact</a
+                >
+              </li>
             </ul>
           </nav>
           <div id="side-menu" class="side-nav">
-            <ul id="navigation">
+            <ul id="side-menu2">
               <li>
                 <a
                   id="default-menu"
-                  class="selected nav-item active_menu"
+                  class="selected nav-item-mob active_menu"
                   href="#singolo"
                   >Home</a
                 >
               </li>
-              <li><a class="nav-item" href="#services">Services</a></li>
-              <li><a class="nav-item" href="#portfolio">Portfolio</a></li>
-              <li><a class="nav-item" href="#about">About</a></li>
-              <li><a class="nav-item" href="#contacts">Contact</a></li>
+              <li><a class="nav-item-mob" href="#services">Services</a></li>
+              <li><a class="nav-item-mob" href="#portfolio">Portfolio</a></li>
+              <li><a class="nav-item-mob" href="#about">About</a></li>
+              <li><a class="nav-item-mob" href="#contacts">Contact</a></li>
             </ul>
           </div>
         </header>
@@ -339,6 +354,7 @@
               id="describe"
               cols="30"
               rows="13"
+              maxlength="50"
             ></textarea>
             <button id="myBtn">Submit</button>
             <div id="myModal" class="modal">

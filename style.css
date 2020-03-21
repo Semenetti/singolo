@@ -5,6 +5,7 @@ html {
   font-family: "Lato";
   font-size: 10px;
   scroll-behavior: smooth;
+  color: #fff;
 }
 body {
   padding: 0;
@@ -106,14 +107,14 @@ nav a {
   font-size: 12px;
   color: #fff;
 }
-.wrapper__header a:not(.selected) {
+.wrapper__header nav a:not(.selected) {
   margin-left: 2.19em;
   /* color: #fff; */
 }
-.wrapper__header a:hover {
+.wrapper__header nav a:hover {
   color: #f06c64;
 }
-.wrapper__header a:not(.selected):before {
+.wrapper__header nav a:not(.selected):before {
   color: #494e61;
   content: "·";
   position: absolute;
@@ -877,7 +878,7 @@ a.anchor {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 767px) {
-  .navigation .active_menu {
+  /* .navigation .active_menu {
     color: red;
   }
   .wrapper__header a:not(.selected) {
@@ -885,12 +886,24 @@ a.anchor {
   }
   .wrapper__header a:not(.selected):before {
     content: "";
-  }
-  .wrapper__header a {
+  } */
+  /* .wrapper__header a {
     color: #fff;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
+  } */
+  .nav-item-mob {
+    /* color: #fff;     */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  a {
+    color: #fff;
+  }
+  #side-menu2 li {
+    color: #fff
   }
   #main_header {
     display: none;
@@ -905,6 +918,9 @@ a.anchor {
   #navigation .menu-icon {
     display: block;
     text-align: left;
+  }
+  #navigation .menu-icon::before {
+    content: '';
   }
   #navigation .menu-icon h1 {
     width: 75%;

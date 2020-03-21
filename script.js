@@ -275,3 +275,50 @@ function sliderRight() {
     slidecounter = 0;
   }
 }
+
+const menuLinks = document.querySelectorAll("nav ul li a");
+const mobileMenu = document.getElementById("side-menu2");
+
+mobileMenu.addEventListener("click", event => {
+  mobileMenu
+    .querySelectorAll("a")
+    .forEach(item => item.classList.remove("active_menu"));
+  event.target.classList.add("active_menu");
+});
+
+document.addEventListener("scroll", changeMenuActiveLink);
+
+window.onload = changeMenuActiveLink();
+
+function changeMenuActiveLink() {
+  const currentPositionY = window.scrollY;
+
+  const activeSections = [
+    document.getElementById("singolo"),
+    document.getElementById("services"),
+    document.getElementById("portfolio"),
+    document.getElementById("about"),
+    document.getElementById("contacts")
+  ];
+
+  activeSections.forEach(section => {
+    if (section.offsetTop - 150 <= currentPositionY) {
+      navigation.querySelectorAll("a").forEach(link => {
+        link.classList.remove("active_menu");
+        if (
+          section.getAttribute("id") === link.getAttribute("href").substring(1)
+        ) {
+          link.classList.add("active_menu");
+        }
+      });
+      mobileMenu.querySelectorAll("a").forEach(link => {
+        link.classList.remove("active_menu");
+        if (
+          section.getAttribute("id") === link.getAttribute("href").substring(1)
+        ) {
+          link.classList.add("active_menu");
+        }
+      });
+    }
+  });
+}
