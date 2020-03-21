@@ -94,6 +94,7 @@ btn.onclick = () => {
 
 closeBtn.onclick = function() {
   modal.style.display = "none";
+  document.forms[0].reset();
 };
 
 window.onclick = function(event) {
