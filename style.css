@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 .wrapper {
-  max-width: 1024px;
+  max-width: 1020px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -54,7 +54,7 @@ body {
 }
 .wrapper__slider {
   background-color: #f06c64;
-  max-width: 1024px;
+  max-width: 1020px;
   margin: 0 auto;
   padding-top: 95px;
   height: 600px;
@@ -76,7 +76,7 @@ header {
   z-index: 10;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1020px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -128,7 +128,7 @@ nav a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1024px;
+  max-width: 1020px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
@@ -167,7 +167,7 @@ button.arrow {
   z-index: 0;
   width: 16px;
   height: 27px;
-  padding: 150px 0;
+  padding: 10px 0;
   background: transparent url("assets/img/arrow.svg") no-repeat center center;
 }
 button.arrow.left {
@@ -292,7 +292,7 @@ button.arrow.right {
 .portfolio {
   margin: 0 auto;
   padding: 60px 0 67px;
-  width: 1024px;
+  width: 1020px;
   background: #2d303a;
   border-bottom: 6px solid #323746;
   box-sizing: border-box;
@@ -369,7 +369,7 @@ button {
   padding-bottom: 67px;
   background: #f2f2f2;
   border-bottom: 6px solid #ffffff;
-  width: 1024px;
+  width: 1020px;
 }
 
 .about-us h2 {
@@ -455,13 +455,14 @@ button {
   display: inline-block;
   border-radius: 100%;
   border: 1px solid #666d89;
+
 }
 .about-us .ico:hover {
   cursor: pointer;
   opacity: 0.45;
 }
 .about-us .ico:not(:first-child) {
-  margin-left: 4px;
+  margin-left: 7px;
 }
 .about-us .ico:last-child {
   margin-left: 7px;
@@ -498,7 +499,7 @@ button {
   line-height: 0.8em;
 }
 .contacts .wrapper {
-  width: 1024px;
+  width: 1020px;
   padding: 0 40px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -511,7 +512,6 @@ button {
   color: #666d89;
   color: #f0d8d9;
   margin-block-start: 18px;
-
   margin-block-end: 0;
 }
 footer .social-box {
@@ -551,16 +551,16 @@ footer .ico.social-box__linkedin {
   background-position-y: 7px;
 }
 .contacts button {
-  margin: 0 auto;
+  margin: 0;
   cursor: pointer;
-  background-color: transparent;
+  background-color: transparent; 
 }
 .contacts button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
 .contacts {
-  width: 1024px;
+  width: 1020px;
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 13px;
@@ -583,7 +583,7 @@ form > * {
 input,
 textarea,
 form button {
-  padding: 12px 15px;
+  padding: 12px 30px;
   width: 619px;
   box-sizing: border-box;
   font: normal 1.2rem/1.4rem "Lato", "Arial", sans-serif;
@@ -664,13 +664,13 @@ form button:hover {
   background: transparent url("./assets/img/email.svg") no-repeat left 7px;
 }
 footer {
-  width: 1024px;
+  width: 1020px;
   margin: 0 auto;
   padding: 22px 0 21px;
   background-color: #2d303a;
 }
 footer .wrapper {
-  width: 1024px;
+  width: 1020px;
   padding: 0 40px;
   margin: 0 auto;
   box-sizing: border-box;
@@ -836,7 +836,7 @@ a.anchor {
 
 .menu-icon .menu-btn {
   width: 36px;
-  height: 24px; 
+  height: 24px;
 }
 
 .side-nav {
@@ -877,22 +877,7 @@ a.anchor {
   width: 90%;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 767px) {
-  /* .navigation .active_menu {
-    color: red;
-  }
-  .wrapper__header a:not(.selected) {
-    margin-left: 0;
-  }
-  .wrapper__header a:not(.selected):before {
-    content: "";
-  } */
-  /* .wrapper__header a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-  } */
+@media only screen and (min-width: 320px) and (max-width: 374px) {
   .nav-item-mob {
     /* color: #fff;     */
     text-decoration: none;
@@ -903,7 +888,7 @@ a.anchor {
     color: #fff;
   }
   #side-menu2 li {
-    color: #fff
+    color: #fff;
   }
   #main_header {
     display: none;
@@ -920,7 +905,7 @@ a.anchor {
     text-align: left;
   }
   #navigation .menu-icon::before {
-    content: '';
+    content: "";
   }
   #navigation .menu-icon h1 {
     width: 75%;
@@ -937,18 +922,23 @@ a.anchor {
   .top-nav .nav-item {
     display: none;
   }
-
+  header {
+    padding: 29px 0px 30px;
+  }
   .slider {
     padding: 33px 40px 8px;
   }
   .iphone img {
     margin-left: 25px;
   }
+  .wrapper__slider-box .right {
+    margin-left: 15px;
+  }
   .iphone img:nth-child(2) {
     margin-left: 15px;
   }
   button.arrow {
-    padding: 140px 0 70px;
+    padding: 10px 0;
   }
   .services-items {
     width: 100%;
@@ -984,10 +974,10 @@ a.anchor {
     width: 100%;
   }
   .about-us .ico:not(:first-child) {
-    margin-left: 0px;
+    margin-left: 7px;
   }
   .about-us .ico:last-child {
-    margin-left: 0px;
+    margin-left: 7px;
   }
   .about-us__employee:nth-child(2) {
     margin-left: 0px;
@@ -1030,6 +1020,184 @@ a.anchor {
   .wrapper__slider {
     height: 380px;
   }
+  .copyright {
+    display: none;
+  }
+  footer .social-box {
+    margin: 0 auto;
+  }
+  .wrapper__slider {
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  /* .navigation .active_menu {
+    color: red;
+  }
+  .wrapper__header a:not(.selected) {
+    margin-left: 0;
+  }
+  .wrapper__header a:not(.selected):before {
+    content: "";
+  } */
+  /* .wrapper__header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  } */
+  .nav-item-mob {
+    /* color: #fff;     */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  a {
+    color: #fff;
+  }
+  #side-menu2 li {
+    color: #fff;
+  }
+  #main_header {
+    display: none;
+  }
+  .top-nav .nav-item {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    text-align: center;
+  }
+  #navigation .menu-icon {
+    display: block;
+    text-align: left;
+  }
+  #navigation .menu-icon::before {
+    content: "";
+  }
+  #navigation .menu-icon h1 {
+    width: 75%;
+    text-align: center;
+  }
+
+  .top-nav .menu-icon .menu-btn {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  #mobile_header {
+    display: inline-block;
+  }
+  .top-nav .nav-item {
+    display: none;
+  }
+  header {
+    padding: 29px 0px 30px;
+  }
+  .slider {
+    padding: 33px 40px 8px;
+  }
+  .iphone img {
+    margin-left: 25px;
+  }
+  .iphone img:nth-child(2) {
+    margin-left: 15px;
+  }
+  button.arrow {
+    padding: 10px 0;
+  }
+  .services-items {
+    width: 100%;
+  }
+  .our-services {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  .portfolio {
+    width: 100%;
+  }
+  .portfolio__examples {
+    overflow: visible;
+    height: 100%;
+  }
+  .portfolio__examples .portfolio__examples-set {
+    width: 48%;
+  }
+  .portfolio__examples .portfolio__examples-set:nth-child(n + 9) {
+    display: none;
+  }
+  .about-us {
+    max-width: 100%;
+  }
+  .row-3-column {
+    flex-direction: column;
+    flex: 0 1 auto;
+  }
+  .about-us__employee {
+    width: 100%;
+  }
+  .about-us__employee img {
+    width: 100%;
+  }
+  .about-us .ico:not(:first-child) {
+    margin-left: 7px;
+  }
+  .about-us .ico:last-child {
+    margin-left: 7px;
+  }
+  .about-us__employee:nth-child(2) {
+    margin-left: 0px;
+  }
+  .about-us__employee:last-child {
+    margin-left: 0px;
+  }
+  .contacts {
+    width: 100%;
+  }
+  .contacts .wrapper {
+    max-width: 100%;
+  }
+  .contact-form {
+    flex-wrap: wrap;
+  }
+  form {
+    width: 100%;
+  }
+  input,
+  textarea,
+  form button {
+    width: 100%;
+  }
+  form {
+    padding-bottom: 40px;
+  }
+  footer {
+    width: 100%;
+  }
+  footer .wrapper {
+    width: 100%;
+  }
+  .menu-icon .menu-btn img {
+    display: block;
+  }
+  .wrapper__header a:not(.selected):before {
+    content: "";
+  }
+  .wrapper__slider {
+    height: 380px;
+  }
+  .copyright {
+    display: none;
+  }
+  footer .social-box {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 512px) {
+  .wrapper__slider {
+    height: 250px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1019px) {
@@ -1045,11 +1213,14 @@ a.anchor {
   .iphone img {
     margin-left: 25px;
   }
+  #horizontal {
+    padding-left: 54px;
+  }
   .iphone img:nth-child(2) {
     margin-left: 15px;
   }
   button.arrow {
-    padding: 140px 0 70px;
+    padding: 10px 0;
   }
   .our-services {
     width: 30%;
@@ -1083,10 +1254,10 @@ a.anchor {
     width: 100%;
   }
   .about-us .ico:not(:first-child) {
-    margin-left: 0px;
+    margin-left: 7px;
   }
   .about-us .ico:last-child {
-    margin-left: 0px;
+    margin-left: 7px;
   }
   .about-us__employee:nth-child(2) {
     margin-left: 10px;
@@ -1095,24 +1266,37 @@ a.anchor {
     margin-left: 10px;
   }
   .contacts {
-    width: 100%;
-  }
-  .contacts .wrapper {
     max-width: 100%;
   }
-  .contact-form {
-    flex-wrap: wrap;
+  .contacts button {
+    margin: 0;
   }
-  form {
+  .contacts .wrapper {
     width: 100%;
+  }
+  /* .contact-form {
+    flex-wrap: wrap;
+  } */
+  form {
+    width: 80%;
+    padding-right: 20px;
   }
   input,
-  textarea,
-  form button {
+  textarea {
     width: 100%;
+    padding: 12px 15px;
+  }
+  form button {
+    width: 20%;
+    padding: 12px 15px;
   }
   form {
     padding-bottom: 40px;
+  }
+  .contact-form__info {
+    width: 303px;
+    padding-left: 3px;
+    box-sizing: border-box;
   }
   footer {
     width: 100%;
